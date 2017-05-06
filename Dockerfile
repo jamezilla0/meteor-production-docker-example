@@ -19,7 +19,7 @@ RUN apt-get install curl -y \
 
   # Build the Meteor app
   && cd /home/meteorapp/meteorapp/app \
-  && meteor build ../build --directory \
+  && meteor build ../build --directory --allow-superuser\
 
   # Install the version of Node.js we need.
   && cd /home/meteorapp/meteorapp/build/bundle \
